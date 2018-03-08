@@ -29,5 +29,31 @@ A development environment base on NervJS and TypeScript and created by create-re
 
 到这里整个基于 React 的开发环境基本搭建完成！接下来，我们使用 `NervJS` 替换掉 `React`！
 
+### 构建基于 NervJS 的开发环境
 
+#### 安装 NervJS 依赖包
 
+> yarn add nervjs --save
+
+#### 移除已经安装的 React 和 React-dom 依赖包
+
+> yarn remove react react-dom -save
+
+#### 修改 webpack 配置
+
+关于从 React 切换到 Nerv 详细可以查看[这里](https://nervjs.github.io/docs/guides/switching-to-nerv.html)
+
+修改 `config/webpack.config.dev.js` 和 `config/webpack.config.prod.js` 里面的配置
+
+```javascript
+{
+  resolve: {
+    alias: {
+      'react': 'nervjs',
+      'react-dom': 'nervjs'
+    }
+  }
+}
+```
+
+在 `alias` 里关联 `nervjs` 和 `react`、 `react-dom`。

@@ -57,3 +57,6 @@ A development environment base on NervJS and TypeScript and created by create-re
 ```
 
 在 `alias` 里关联 `nervjs` 和 `react`、 `react-dom`。
+
+### 创建项目的基础目录结构
+
